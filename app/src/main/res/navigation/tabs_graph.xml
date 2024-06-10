@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tabs_graph"
+    app:startDestination="@id/searchFragment">
+
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.uni_coursework.screens.search.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_timerFragment_to_addFriendFragment"
+            app:destination="@id/addFriendFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addFriendFragment"
+        android:name="com.example.uni_coursework.screens.addFriend.AddFriendFragment"
+        android:label="fragment_add_friend"
+        tools:layout="@layout/fragment_add_friend" />
+    <fragment
+        android:id="@+id/bookingsFragment"
+        android:name="com.example.uni_coursework.screens.bookings.BookingsFragment"
+        android:label="fragment_bookings"
+        tools:layout="@layout/fragment_bookings" >
+        <action
+            android:id="@+id/action_bookingsFragment_to_addRoomFragment"
+            app:destination="@id/addRoomFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addRoomFragment"
+        android:name="com.example.uni_coursework.screens.addRoom.AddRoomFragment"
+        android:label="fragment_add_room"
+        tools:layout="@layout/fragment_add_room" />
+
+</navigation>

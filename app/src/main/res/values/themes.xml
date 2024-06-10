@@ -1,0 +1,15 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.UNI_coursework" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- Define a custom button style -->
+        <item name="android:buttonStyle">@style/CustomButtonStyle</item>
+    </style>
+
+    <!-- Custom button style -->
+    <style name="CustomButtonStyle" parent="Widget.Material3.Button">
+        <item name="android:background">@drawable/dark_button_shape</item>
+    </style>
+
+    <style name="Theme.UNI_coursework" parent="Base.Theme.UNI_coursework" />
+</resources>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.uni_coursework.screens.addRoom.AddRoomFragment"
+    android:background="@color/black">
+
+    <ImageButton
+        android:id="@+id/addRoomGoBackButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@android:color/transparent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_go_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/addRoomViewPager"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addRoomGoBackButton" />
+
+    <EditText
+        android:id="@+id/addRoomTitleInput"
+        android:layout_width="0dp"
+        android:layout_height="50sp"
+        android:layout_marginTop="50dp"
+        android:paddingHorizontal="20dp"
+        android:inputType="text"
+        android:hint="Название"
+        android:fontFamily="@font/montserrat_medium"
+        android:background="@drawable/light_button_shape"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/addRoomViewPager" />
+
+    <EditText
+        android:id="@+id/addRoomBedsAmountInput"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:paddingHorizontal="20dp"
+        android:inputType="text"
+        android:hint="Количество кроватей"
+        android:fontFamily="@font/montserrat_medium"
+        android:background="@drawable/light_button_shape"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/addRoomTitleInput" />
+
+    <EditText
+        android:id="@+id/addRoomCostInput"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:paddingHorizontal="20dp"
+        android:inputType="number"
+        android:hint="Стоимость Р."
+        android:fontFamily="@font/montserrat_medium"
+        android:background="@drawable/light_button_shape"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/addRoomBedsAmountInput" />
+
+    <Button
+        android:id="@+id/addRoomSaveButton"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:text="Сохранить"
+        android:fontFamily="@font/montserrat_black"
+        android:textSize="20sp"
+        android:textAllCaps="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/addRoomCostInput"
+        android:backgroundTint="@color/green"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="50dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="50dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

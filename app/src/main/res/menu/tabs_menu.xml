@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/search_menu_tab" android:icon="@drawable/ic_timer_tab"
+        android:title="Таймер" />
+    <item android:id="@+id/bookings_menu_tab" android:icon="@drawable/ic_events_tab"
+        android:title="События"/>
+
+<!--    <item android:id="@+id/timer_graph" android:icon="@drawable/ic_timer_tab"-->
+<!--        android:title="Таймер" />-->
+<!--    <item android:id="@+id/chatrooms_graph" android:icon="@drawable/ic_chatrooms_tab"-->
+<!--        android:title="Мессенджер"/>-->
+<!--    <item android:id="@+id/events_graph" android:icon="@drawable/ic_events_tab"-->
+<!--        android:title="События"/>-->
+
+</menu>
