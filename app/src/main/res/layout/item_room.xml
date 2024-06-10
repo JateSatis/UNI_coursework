@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="30dp">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/roomItemViewPager"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+    </androidx.viewpager.widget.ViewPager>
+
+    <TextView
+        android:id="@+id/roomItemTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="Название комнаты"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/roomItemViewPager" />
+
+    <TextView
+        android:id="@+id/roomItemBeds"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="Beds"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/roomItemTitle" />
+
+    <TextView
+        android:id="@+id/roomItemPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="Цена"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/roomItemBeds" />
+
+    <Button
+        android:id="@+id/roomItemBookButton"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:backgroundTint="@color/orange"
+        android:fontFamily="@font/benzin_extrabold"
+        android:textSize="10dp"
+        android:textAllCaps="true"
+        android:text="Забронировать"
+        app:layout_constraintBottom_toBottomOf="@+id/roomItemPrice"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/roomItemTitle" />
+
+    <ProgressBar
+        android:id="@+id/roomItemProgressBar"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/roomItemBookButton"
+        app:layout_constraintEnd_toEndOf="@+id/roomItemBookButton"
+        app:layout_constraintStart_toStartOf="@+id/roomItemBookButton"
+        app:layout_constraintTop_toTopOf="@+id/roomItemBookButton" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

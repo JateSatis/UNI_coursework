@@ -54,7 +54,7 @@ public class AddRoomFragment extends Fragment {
             String title = binding.addRoomTitleInput.getText().toString();
             String beds = binding.addRoomBedsAmountInput.getText().toString();
             Integer cost = Integer.parseInt(binding.addRoomCostInput.getText().toString());
-            String booker = viewModel.getUserUid();
+            String booker = "";
             viewModel.addRoom(title, beds, cost, booker, imagesNames, false, documentReference -> {
                 viewModel.uploadImages(documentReference.getId(), imageUris, imagesNames, onUploadCompleteListener);
             });

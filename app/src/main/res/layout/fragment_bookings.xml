@@ -4,23 +4,46 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.example.uni_coursework.screens.bookings.BookingsFragment">
+    tools:context="com.example.uni_coursework.screens.bookings.BookingsFragment"
+    android:paddingHorizontal="25dp">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Events"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/bookingsRecyclerContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/bookingsLaunchAddRoomButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageButton
+        android:id="@+id/logoutButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="25dp"
+        android:scaleType="centerCrop"
+        android:backgroundTint="@android:color/transparent"
+        android:src="@drawable/ic_logout"
+        app:layout_constraintEnd_toEndOf="@+id/bookingsRecyclerContainer"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <Button
+        android:visibility="gone"
         android:id="@+id/bookingsLaunchAddRoomButton"
         android:text="Создать комнату"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/bookingsProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
